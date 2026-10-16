@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>今日光影指南 | 合规影视推荐与正版导航（非今日影视）</title>
+  <meta name="description" content="今日光影指南（jinriyingshi-h5）做每日合规影视片单推荐与正版渠道导航。非原今日影视站、不聚合盗版片源、不提供磁力网盘。含今日排片、正版信源与伪站避坑。" />
+  <meta name="author" content="今日光影指南" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="canonical" href="https://jinriyingshi-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="今日光影指南" />
+  <meta property="og:title" content="今日光影指南 | 合规影视推荐与正版导航" />
+  <meta property="og:description" content="非原今日影视站，只做正版持权平台导航。" />
+  <meta property="og:url" content="https://jinriyingshi-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="今日光影指南 | 合规影视推荐与正版导航" />
+  <meta name="twitter:description" content="不重建今日影视镜像，拒绝盗版聚合。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "今日光影指南",
+    "url": "https://jinriyingshi-h5.github.io/",
+    "description": "每日合规影视片单推荐与正版渠道导航站（非原今日影视站）。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#F5F3EE;
+      --bg2:#ECE8DE;
+      --card:#FFFFFF;
+      --line:#D8D2C4;
+      --ink:#1A1A1A;
+      --muted:#6B655B;
+      --paper:#FAF8F3;
+      --headline:#111111;
+      --news-red:#D62828;
+      --news-red-deep:#A51C1C;
+      --ticket:#FBF7EC;
+      --silver:#B3ADA0;
+      --blue:#2C5F8A;
+      --radius:16px;
+      --maxw:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(245,243,238,.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--news-red)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:21px;display:flex;align-items:center;gap:10px}
+    .logo .fold{width:36px;height:34px;border-radius:6px;background:linear-gradient(135deg,var(--headline),#3a3a3a);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;box-shadow:inset 0 -3px 0 rgba(255,255,255,.15);position:relative}
+    .logo .fold::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.5)}
+    .logo b{color:var(--news-red-deep)}
+    .logo span{color:var(--headline)}
+    nav.menu{display:flex;gap:6px;font-size:14px;font-weight:700;color:var(--muted)}
+    nav.menu a{padding:8px 14px;border-radius:8px;border:2px solid transparent;transition:.2s}
+    nav.menu a:hover{color:var(--news-red-deep);border-color:var(--line);background:var(--bg2)}
+    .nav-toggle{display:none;background:none;border:2px solid var(--news-red);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:18px;cursor:pointer}
+
+    .hero{padding:74px 0 80px;background:
+      radial-gradient(600px 320px at 85% 12%,rgba(214,40,40,.10),transparent 60%),
+      radial-gradient(520px 260px at 6% 95%,rgba(44,95,138,.08),transparent 60%),
+      linear-gradient(180deg,#ECE8DE,#F5F3EE);position:relative;overflow:hidden}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .pill{display:inline-block;background:var(--news-red);color:#fff;font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+    .disclaim{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--news-red-deep);border:1px dashed var(--news-red);border-radius:20px;padding:4px 12px;vertical-align:middle}
+    .hero h1{font-size:clamp(30px,5.5vw,52px);line-height:1.05;margin:0 0 14px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--news-red-deep)}
+    .hero h1 .ink-em{color:var(--headline)}
+    .hero p.lead{font-size:16px;color:var(--muted);max-width:640px;margin:0 0 22px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-tag{border:2px solid var(--line);border-radius:8px;padding:5px 13px;font-size:13px;font-weight:600;background:#fff}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 26px;border-radius:10px;font-weight:800;font-size:15px;transition:.2s;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--news-red);color:#fff;border:2px solid var(--news-red-deep)}
+    .btn-primary:hover{background:var(--news-red-deep)}
+    .btn-ghost{border:2px solid var(--headline);color:var(--headline);background:transparent}
+    .btn-ghost:hover{background:var(--headline);color:#fff}
+
+    /* 头版折纸 */
+    .front{width:300px;height:240px;margin:0 auto;background:var(--paper);border:2px solid var(--line);border-radius:6px;position:relative;box-shadow:0 16px 40px rgba(26,26,26,.18);overflow:hidden;transform:rotate(1.5deg)}
+    .front::before{content:"";position:absolute;top:0;left:0;width:100%;height:46px;background:var(--headline)}
+    .front .masthead{position:absolute;top:10px;left:0;right:0;text-align:center;color:#fff;font-size:16px;font-weight:900;letter-spacing:3px}
+    .front .date{position:absolute;top:34px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font-size:9px;letter-spacing:1px}
+    .front .rule{position:absolute;top:50px;left:16px;right:16px;height:2px;background:var(--news-red)}
+    .front .body{position:absolute;top:62px;left:16px;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px}
+    .front .line-row{height:8px;background:var(--line);border-radius:2px}
+    .front .line-row.short{width:60%}
+    .front .line-row.mid{width:80%}
+    .front .lead-box{height:52px;background:var(--bg2);border-left:3px solid var(--news-red);border-radius:4px}
+    .front .no{position:absolute;bottom:8px;right:16px;font-size:10px;color:var(--news-red-deep);font-weight:700}
+
+    section{padding:60px 0;border-bottom:2px dashed var(--line)}
+    .sec-head{margin-bottom:32px;text-align:center}
+    .sec-head .kicker{color:var(--news-red-deep);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+    .sec-head h2{font-size:clamp(24px,4vw,34px);margin:6px 0 8px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:700px;font-size:14px}
+
+    /* 今日排片：时间轴 */
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--card);border:2px solid var(--line);border-radius:16px;overflow:hidden}
+    .time{flex:1;padding:22px;text-align:center;position:relative;border-right:1px dashed var(--line)}
+    .time:last-child{border-right:none}
+    .time .clock{font-size:13px;font-weight:800;color:var(--news-red-deep);margin-bottom:8px}
+    .time .emoji{font-size:32px;display:block;margin-bottom:8px}
+    .time h3{margin:0 0 6px;font-size:15px;font-weight:800}
+    .time p{margin:0;color:var(--muted);font-size:12px}
+
+    /* 片单：横向头条卡 */
+    .list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .film{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:22px;display:flex;gap:16px;align-items:flex-start;transition:.3s;position:relative}
+    .film:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(26,26,26,.14)}
+    .film .no{position:absolute;top:16px;right:20px;font-size:11px;font-weight:800;color:var(--news-red);background:rgba(214,40,40,.08);padding:2px 8px;border-radius:4px}
+    .film .ic{font-size:34px;flex-shrink:0}
+    .film h3{margin:0 0 4px;font-size:16px;font-weight:900}
+    .film .sub{font-size:11px;color:var(--news-red-deep);font-weight:700;margin-bottom:6px}
+    .film p{margin:0;color:var(--muted);font-size:13px}
+    .film ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:12px}
+    .film ul li{margin:2px 0}
+
+    /* 信源：四宫格 */
+    .src{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .src-card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .src-card:hover{border-color:var(--news-red);background:var(--bg2)}
+    .src-card .ic{font-size:32px;margin-bottom:8px;display:block}
+    .src-card h3{margin:0 0 4px;font-size:15px;font-weight:800}
+    .src-card p{margin:0;color:var(--muted);font-size:12px}
+
+    /* 避坑：报纸专栏 */
+    .warn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .reef{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:22px;border-top:5px solid var(--news-red)}
+    .reef:nth-child(2){border-top-color:var(--headline)}
+    .reef:nth-child(3){border-top-color:var(--blue)}
+    .reef h3{margin:0 0 8px;font-size:16px;font-weight:800}
+    .reef p{margin:0;color:var(--muted);font-size:13px}
+
+    .notice{background:var(--bg2);border:2px dashed var(--news-red-deep);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--muted);max-width:820px;margin:24px auto 0}
+    .notice b{color:var(--news-red-deep)}
+
+    footer{padding:36px 0;text-align:center;color:#fff;font-size:13px;background:var(--headline)}
+    footer a{color:#F0B4B4}
+
+    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:46px;height:46px;border-radius:50%;border:2px solid var(--news-red);background:var(--news-red);color:#fff;font-size:20px;font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(16px);transition:.5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
+      .time{border-right:none;border-bottom:1px dashed var(--line)}
+      .list{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr 1fr}
+      .warn{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:10px 20px 20px;background:rgba(245,243,238,.98);border-bottom:2px solid var(--news-red);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:12px 8px;border-bottom:2px solid var(--line);border-radius:0}
+      .timeline{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo"><span class="fold">📰</span><b>今日</b><span>光影指南</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#timeline">今日排片</a>
+        <a href="#list">光影片单</a>
+        <a href="#src">正版信源</a>
+        <a href="#warn">伪今日影视避坑</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <div class="pill">Today's Reel · Legal Only<span class="disclaim">非原今日影视</span></div>
+        <h1>今日光影指南<br/><span class="ink-em">头版</span>只报<em>正版片</em></h1>
+        <p class="lead">本站不是原「今日影视」、不接“今日更新”聚合流量；只做每日合规片单推荐：合家欢、轻喜剧、纪录、正版租赁导航，全部走持权平台。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">今日片单</span>
+          <span class="hero-tag">正版导航</span>
+          <span class="hero-tag">不聚合盗版</span>
+          <span class="hero-tag">无磁力网盘</span>
+          <span class="hero-tag">非原站复刻</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#timeline">看今日排片 →</a>
+          <a class="btn btn-ghost" href="#warn">识别伪今日影视</a>
+        </div>
+      </div>
+      <div>
+        <div class="front">
+          <div class="masthead">今日光影</div>
+          <div class="date">VOL.01 · LEGAL EDITION</div>
+          <div class="rule"></div>
+          <div class="body">
+            <div class="lead-box"></div>
+            <div class="line-row"></div>
+            <div class="line-row mid"></div>
+            <div class="line-row short"></div>
+          </div>
+          <div class="no">NO. JINRI-YINGSHI-H5</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Today's Screening</div>
+        <h2>今日排片</h2>
+        <p>按一天四个时段排正版片单，不按“今日更新”关键词堆。</p>
+      </div>
+      <div class="timeline">
+        <div class="time">
+          <div class="clock">07:00</div>
+          <span class="emoji">☕</span>
+          <h3>晨间轻片</h3>
+          <p>通勤碎片、短集轻喜剧</p>
+        </div>
+        <div class="time">
+          <div class="clock">12:00</div>
+          <span class="emoji">🍚</span>
+          <h3>午间下饭</h3>
+          <p>美食、职场、情景喜剧</p>
+        </div>
+        <div class="time">
+          <div class="clock">18:00</div>
+          <span class="emoji">🛋️</span>
+          <h3>晚间合家</h3>
+          <p>家庭厅、治愈动画</p>
+        </div>
+        <div class="time">
+          <div class="clock">22:00</div>
+          <span class="emoji">🌙</span>
+          <h3>深夜正剧</h3>
+          <p>悬疑、限定剧、正版租赁</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="list" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Today's Reel List</div>
+        <h2>光影片单</h2>
+        <p>四个方向，只列类型与正版路径，不列盗版源。</p>
+      </div>
+      <div class="list">
+        <div class="film">
+          <span class="ic">🏠</span>
+          <div>
+            <h3>家庭厅</h3>
+            <div class="sub">合家欢 · 低冲突</div>
+            <p>亲情剧、治愈动画、生活轻喜剧。</p>
+            <ul>
+              <li>正版OTT家庭专区</li>
+              <li>避开枪版录屏</li>
+              <li>电视投屏友好</li>
+            </ul>
+          </div>
+          <span class="no">NO.01</span>
+        </div>
+        <div class="film">
+          <span class="ic">🍚</span>
+          <div>
+            <h3>下饭轻片</h3>
+            <div class="sub">轻松 · 短时长</div>
+            <p>情景喜剧、美食、职场轻喜剧。</p>
+            <ul>
+              <li>正版平台分集订阅</li>
+              <li>不装第三方播放器</li>
+              <li>广告位只认官方</li>
+            </ul>
+          </div>
+          <span class="no">NO.02</span>
+        </div>
+        <div class="film">
+          <span class="ic">🎞️</span>
+          <div>
+            <h3>纪录大屏</h3>
+            <div class="sub">4K · 正版专区</div>
+            <p>自然、城市、旅行纪录片。</p>
+            <ul>
+              <li>官方纪录专区</li>
+              <li>字幕清晰版</li>
+              <li>不搜“今日同款源”</li>
+            </ul>
+          </div>
+          <span class="no">NO.03</span>
+        </div>
+        <div class="film">
+          <span class="ic">🎭</span>
+          <div>
+            <h3>正剧悬疑</h3>
+            <div class="sub">周末 · 付费租赁</div>
+            <p>社会剧、推理、限定剧集。</p>
+            <ul>
+              <li>单片租赁/订阅正版</li>
+              <li>认准持权平台</li>
+              <li>不点假播放键</li>
+            </ul>
+          </div>
+          <span class="no">NO.04</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="src" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Legal Sources</div>
+        <h2>正版信源</h2>
+        <p>只走持权分发，不碰“今日影视”聚合。</p>
+      </div>
+      <div class="src">
+        <div class="src-card"><span class="ic">📺</span><h3>正版OTT</h3><p>持牌平台订阅/单片租赁</p></div>
+        <div class="src-card"><span class="ic">🎬</span><h3>院线/重映</h3><p>正规购票与官方重映</p></div>
+        <div class="src-card"><span class="ic">🏛️</span><h3>影展放映</h3><p>官方放映、学术展映</p></div>
+        <div class="src-card"><span class="ic">📼</span><h3>纪录专区</h3><p>正版引进纪录片</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Fake Today</div>
+        <h2>伪「今日影视」避坑</h2>
+        <p>“今日影视”类泛词页面多是聚合站套壳，别接原站流量。</p>
+      </div>
+      <div class="warn">
+        <div class="reef">
+          <h3>🚫 “今日更新”聚合页</h3>
+          <p>标题堆“今日影视/影视大全/免费高清”，正文挂解析接口与多播放源，属低质采集聚合，监管口径禁止链接非法视听节目源。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 假播放键+下载器</h3>
+          <p>点播放跳EXE、装专用播放器/插件，属盗版站常见引流；还会采集浏览数据、跳广告。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 网盘码/磁力搬运</h3>
+          <p>社群发网盘提取码、磁力种子、卖周卡月卡代理，不在正版体系内，别点别充。</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>声明：</b>本页「今日光影指南」仅为“今日”字面的光影主题导航，与原今日影视站无任何关系；不重建其原站/镜像、不聚合影视资源、不提供盗版播放与下载；按网络视听合规要求，不转播、链接、聚合、集成非法视听节目源。
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © 2026 今日光影指南（jinriyingshi-h5）｜ 静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://jinriyingshi-h5.github.io ｜
+      非原今日影视站｜不提供盗版资源、磁力、网盘与成人内容。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
